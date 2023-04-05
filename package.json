@@ -1,0 +1,20 @@
+{
+  "name": "wallet-monitor-docker",
+  "version": "0.0.1",
+  "description": "This wrapper around @xlabs-xyz/wallet-monitor to run it with only a configuration file",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@xlabs-xyz/wallet-monitor": "0.0.9",
+    "winston": "^3.8.2",
+    "yaml": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.7",
+    "typescript": "^5.0.2"
+  }
+}
