@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  wallet-monitor:
+    image: solanoepalacio/wallet-monitor-d:latest
+    container_name: wallet-monitor-d
+    ports:
+      - "3001:3001"
+    environment:
+      WALLET_CONFIG_EXTENSION: "yaml" # yaml | yml | json
+    restart: always
+    volumes:
+      - ./sample-config.yaml:/etc/wallet-monitor/config.yaml
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - '4000:3000'
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: 1234
+
+    volumes:
+      - ./grafana:/etc/grafana/provisioning
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - '9090:9090'
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command: "--config.file=/etc/prometheus/prometheus.yml"

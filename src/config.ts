@@ -23,7 +23,7 @@ function parseConfigExtension(extension: string | undefined): SupportedFileExten
 }
 
 function readFile(fileExtension: SupportedFileExtensions): any {
-  const filePath = process.cwd() + '/config.' + fileExtension;
+  const filePath = '/etc/wallet-monitor/config.' + fileExtension;
 
   const fileData = fs.readFileSync(filePath, 'utf8');
 

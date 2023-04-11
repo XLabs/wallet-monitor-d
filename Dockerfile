@@ -4,11 +4,12 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+COPY src src
 
-COPY . .
+COPY tsconfig.json tsconfig.json
+
+RUN npm install
 
 RUN npm run build
 
-# Start the app
 CMD [ "node", "./lib/index.js" ]
