@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@xlabs-xyz/wallet-monitor": "0.0.9",
+    "@xlabs-xyz/wallet-monitor": "0.0.14",
     "winston": "^3.8.2",
     "yaml": "^2.2.1"
   },
