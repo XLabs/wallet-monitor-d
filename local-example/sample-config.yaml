@@ -1,16 +1,16 @@
 options:
-  debug: true
-  pollInterval: 5000
+  debug: true # optional
+  pollInterval: 5000 # optional
   prometheus:
-    port: 3001
-    path: /metrics
-    gaugeName: 'wallet_balance'
+    port: 3001 # optional
+    path: /metrics # optional 
+    gaugeName: 'wallet_balance' # optional
 wallets:
   ethereum: 
-    network: goerli
+    network: goerli # optional
     chainConfig:
-      nodeUrl: 'https://eth.llamarpc.com'
-      tokenPollConcurrency: 1
+      nodeUrl: 'https://eth.llamarpc.com' # optional
+      tokenPollConcurrency: 1 # optional
     addresses:
       '0x80C67432656d59144cEFf962E8fAF8926599bCF8': [USDC, DAI]
       '0x8d0d970225597085A59ADCcd7032113226C0419d': [usdc]
